@@ -3,106 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desarrollo de Aplicaciones</title>
+  <title>Portafolio - Desarrollo de Aplicaciones</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Vanta.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+
+  <style>
+    /* Fondo animado */
+    #fondo {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    /* Animación suave al hacer scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.9s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Efecto máquina de escribir */
+    .typewriter {
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: #a855f7;
+      border-right: 3px solid #a855f7;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Botones brillantes */
+    .btn-glow {
+      background: linear-gradient(90deg, #9333ea, #a855f7, #c084fc);
+      color: white;
+      font-weight: bold;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 20px rgba(168,85,247,0.8);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-glow:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(192,132,252,1);
+      background: linear-gradient(90deg, #c084fc, #a855f7, #9333ea);
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+<body class="text-white font-sans">
 
-  <!-- Fondo decorativo -->
-  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+  <!-- Fondo animado -->
+  <div id="fondo"></div>
 
-  <!-- Encabezado -->
-  <header class="w-full bg-purple-800/90 flex items-center justify-center relative py-6 shadow-lg z-10">
-    <img src="logo_uni.png" alt="Logo Universidad" class="absolute left-6 w-20 h-20 object-contain">
-    <h1 class="text-4xl md:text-5xl font-bold text-center drop-shadow-[0_0_15px_#a855f7]">
-      Desarrollo de Aplicaciones
-    </h1>
-    <!-- Nombre alineado a la derecha -->
-    <span class="absolute right-6 text-lg md:text-xl font-bold text-purple-300 drop-shadow-[0_0_10px_#9333ea]">
-      Kimberly Casimiro Laura
-    </span>
+  <!-- Navbar superior sticky -->
+  <header class="fixed top-0 left-0 w-full bg-purple-900/70 backdrop-blur-md z-50 shadow-lg border-b border-purple-700">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-purple-300 drop-shadow-[0_0_15px_#9333ea] tracking-wide">
+        🚀 Bienvenido, listo para Aprender
+      </h1>
+      <nav class="flex gap-6">
+        <a href="#inicio" class="hover:text-purple-400 font-semibold transition">Inicio</a>
+        <a href="#sobre" class="hover:text-purple-400 font-semibold transition">Sobre mí</a>
+        <a href="#manuales" class="hover:text-purple-400 font-semibold transition">Manuales</a>
+        <a href="#proyectos" class="hover:text-purple-400 font-semibold transition">Proyectos</a>
+        <a href="#contacto" class="hover:text-purple-400 font-semibold transition">Contacto</a>
+      </nav>
+    </div>
   </header>
+
+  <!-- Hero / Inicio -->
+<section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 md:pt-32">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-purple-400 drop-shadow-[0_0_20px_#a855f7] mb-6 fade-in">
+      Hola 👋 Soy Kimberly Casimiro
+    </h2>
+    <!-- Frases motivadoras dinámicas -->
+    <div class="h-12 mb-6">
+      <span id="frase" class="typewriter"></span>
+    </div>
+    <p class="text-lg md:text-xl max-w-3xl text-gray-200 fade-in">
+      Este portafolio muestra mi aprendizaje en <span class="font-bold text-purple-300">Desarrollo de Aplicaciones</span>.  
+      Aquí descubrirás manuales de Git y GitHub, y mis proyectos que demuestran que <span class="italic">¡la programación es para todos!</span>  
+    </p>
+    <!-- Animación Lottie -->
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jcikwtux.json" 
+      background="transparent" speed="1" style="width: 280px; height: 280px;" loop autoplay>
+    </lottie-player>
+    <a href="#proyectos" class="btn-glow mt-6">🚀 Empieza tu Viaje</a>
+  </section>
   
-  <!-- Introducción / Sobre el curso -->
-  <section class="max-w-5xl mx-auto mt-10 px-6 z-10 w-full">
-    <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700">
-      <h2 class="text-2xl md:text-3xl font-bold text-purple-300 text-center mb-4 drop-shadow-[0_0_10px_#9333ea]">
-        ✨ Sobre el Curso ✨
-      </h2>
-      <hr class="border-purple-700 mb-6">
-      <p class="text-lg leading-relaxed text-justify">
-        El curso de <span class="font-bold text-purple-400">Desarrollo de Aplicaciones</span> tiene como objetivo 
-        introducirte al mundo de la programación y la creación de aplicaciones modernas. A lo largo del ciclo, 
-        explorarás conceptos fundamentales de <span class="italic">diseño, programación y buenas prácticas de ingeniería de software</span>, 
-        con el propósito de adquirir las habilidades necesarias para construir soluciones tecnológicas útiles y funcionales.
-      </p>
-      <p class="text-lg leading-relaxed text-justify mt-4">
-        El aprendizaje se organiza en <span class="font-bold">16 semanas</span>, cada una con actividades, recursos y proyectos 
-        que te permitirán avanzar paso a paso en tu formación como futuro profesional de 
-        <span class="font-bold text-purple-400">Ingeniería de Sistemas y Computación</span>.
-      </p>
+
+  <!-- Sobre mí -->
+  <section id="sobre" class="max-w-5xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-purple-300 text-center mb-6 drop-shadow-[0_0_15px_#9333ea]">
+      👩‍💻 Sobre mí
+    </h2>
+    <p class="text-lg text-justify leading-relaxed">
+      Soy estudiante de <span class="font-bold text-purple-400">Ingeniería de Sistemas y Computación</span>, apasionada por la programación 
+      y la construcción de aplicaciones útiles.  
+      Mi meta es inspirar a otros a descubrir el poder de la tecnología, porque <span class="font-bold text-purple-300">todos podemos programar</span>.
+    </p>
+    <div class="flex justify-center gap-6 mt-6 flex-wrap">
+      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ Java</span>
+      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ Git</span>
+      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ GitHub</span>
+      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ PowerApps</span>
     </div>
   </section>
 
-  <!-- Contenedor principal: sidebar (semanas) + área Canva -->
-  <main class="flex flex-1 mt-8 z-10 px-6 gap-6 items-start max-w-6xl mx-auto w-full">
-
-    <!-- Barra lateral semanas -->
-    <aside class="w-56 min-w-[14rem] bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-24 h-auto max-h-[72vh] overflow-y-auto">
-      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">Aprendizaje por Semanas</h2>
-      <div class="flex flex-col gap-2">
-        <a href="semana1.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 1</a>
-        <a href="semana2.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 2</a>
-        <a href="semana3.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 3</a>
-        <a href="semana4.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 4</a>
-        <a href="semana5.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 5</a>
-        <a href="semana6.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 6</a>
-        <a href="semana7.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 7</a>
-        <a href="semana8.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 8</a>
-        <a href="semana9.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 9</a>
-        <a href="semana10.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 10</a>
-        <a href="semana11.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 11</a>
-        <a href="semana12.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 12</a>
-        <a href="semana13.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 13</a>
-        <a href="semana14.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 14</a>
-        <a href="semana15.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 15</a>
-        <a href="semana16.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 16</a>
+  <!-- Manuales -->
+  <section id="manuales" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-purple-300 text-center mb-10 drop-shadow-[0_0_15px_#9333ea]">
+      📘 Manuales de Git & GitHub
+    </h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-purple-900/40 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-purple-300 mb-3">📖 Git</h3>
+        <p class="text-gray-300 mb-4">Control de versiones, comandos principales y flujo de trabajo ágil con Git.</p>
+        <a href="manual_git.html" class="btn-glow">Ver más</a>
       </div>
-    </aside>
-
-    <!-- Área principal: embed de Canva -->
-    <section class="flex-1 bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-purple-700">
-      <h2 class="text-2xl font-bold text-purple-300 mb-4 drop-shadow-[0_0_10px_#9333ea]">🎨 Manual de descarga de Git y GitHub</h2>
-      <div class="w-full rounded-lg overflow-hidden border border-purple-700 shadow-lg">
-        <iframe
-          src="https://www.canva.com/design/DAGy-c34CUo/o1Y8xgbsm61Tud-QEtaMVQ/view?embed"
-          class="w-full h-[60vh] lg:h-[78vh]"
-          frameborder="0"
-          allowfullscreen
-          loading="lazy"
-          title="Manual Git y GitHub - Canva">
-        </iframe>
+      <div class="bg-purple-900/40 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold text-purple-300 mb-3">📖 GitHub</h3>
+        <p class="text-gray-300 mb-4">Repositorios remotos, ramas, colaboración en equipo y despliegue profesional.</p>
+        <a href="manual_github.html" class="btn-glow">Ver más</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <!-- Recursos -->
-  <section class="mt-10 text-center z-10">
-    <h2 class="text-2xl font-bold text-purple-700 mb-6">Recursos del Curso</h2>
-    <div class="flex justify-center gap-6 flex-wrap px-6">
-      <a href="https://github.com/Wikkl20/DDA_Semana1" target="_blank" rel="noopener noreferrer"
-         class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105 hover:shadow-[0_0_15px_#a855f7]">
-        🌐 Ver en GitHub
+  <!-- Proyectos -->
+  <section id="proyectos" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-purple-300 text-center mb-10 drop-shadow-[0_0_15px_#9333ea]">
+      💻 Proyectos Semanales
+    </h2>
+    <div class="grid md:grid-cols-4 gap-4">
+      <a href="semana1.html" class="bg-purple-900/40 p-4 rounded-xl shadow-lg hover:scale-105 transition text-center">
+        <h3 class="font-bold text-purple-300">Semana 1</h3>
+        <p class="text-sm text-gray-400">Descuento por docenas</p>
       </a>
+      <a href="semana2.html" class="bg-purple-900/40 p-4 rounded-xl shadow-lg hover:scale-105 transition text-center">
+        <h3 class="font-bold text-purple-300">Semana 2</h3>
+        <p class="text-sm text-gray-400">Cálculo de sueldo</p>
+      </a>
+      <!-- Repite hasta Semana 16 -->
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
-    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
-    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  <!-- Contacto -->
+  <footer id="contacto" class="bg-purple-900/90 text-center py-10 mt-16 border-t border-purple-700">
+    <h2 class="text-xl font-bold text-purple-300 mb-4">📞 Contacto</h2>
+    <p>📱 Celular: <span class="font-bold">900385966</span></p>
+    <p>✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+    <a href="https://github.com/Wikkl20" target="_blank" class="btn-glow mt-4 inline-block">🌐 Mi GitHub</a>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Fondo Vanta.js espacio estrellado
+    VANTA.NET({
+      el: "#fondo",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x9333ea,
+      backgroundColor: 0x000000,
+      points: 15.00,
+      maxDistance: 20.00,
+      spacing: 18.00
+    });
+
+    // Animación al hacer scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    faders.forEach(fader => observer.observe(fader));
+
+    // Frases motivadoras dinámicas
+    const frases = [
+      "✨ Tú también puedes programar ✨",
+      "🚀 Listo para aprender, crear y transformar 🚀",
+      "💡 Convierte tus ideas en aplicaciones 💡",
+      "🌍 El futuro lo construimos con código 🌍"
+    ];
+    let i = 0;
+    const fraseEl = document.getElementById("frase");
+
+    function cambiarFrase() {
+      fraseEl.classList.remove("typewriter");
+      void fraseEl.offsetWidth; // reinicia animación
+      fraseEl.textContent = frases[i];
+      fraseEl.classList.add("typewriter");
+      i = (i + 1) % frases.length;
+    }
+    setInterval(cambiarFrase, 4000);
+    cambiarFrase();
+  </script>
 
 </body>
 </html>

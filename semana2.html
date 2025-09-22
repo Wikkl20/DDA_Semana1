@@ -5,123 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Semana 2 - Desarrollo de Aplicaciones</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animaciones */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Efecto typing */
+    .typing {
+      border-right: 3px solid #a855f7;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end), blink .8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
 
   <!-- Fondo decorativo -->
   <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
 
-  <!-- Encabezado -->
-  <header class="w-full bg-purple-800/90 flex items-center justify-center relative py-6 shadow-lg z-10">
-    <img src="logo_uni.png" alt="Logo Universidad" class="absolute left-6 w-20 h-20 object-contain">
-    <h1 class="text-4xl md:text-5xl font-bold text-center drop-shadow-[0_0_15px_#a855f7]">
-      Desarrollo de Aplicaciones
-    </h1>
-    <span class="absolute right-6 text-lg md:text-xl font-bold text-purple-300 drop-shadow-[0_0_10px_#9333ea]">
-      Kimberly Casimiro Laura
-    </span>
+  <!-- NAVBAR SUPERIOR -->
+  <header class="fixed top-0 left-0 w-full bg-purple-900/90 backdrop-blur-md z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-12 h-12 object-contain">
+        <span class="font-bold text-purple-300 text-xl">UPLA</span>
+      </div>
+      <!-- Título central -->
+      <h1 class="text-2xl md:text-3xl font-bold text-purple-200 drop-shadow-[0_0_15px_#a855f7]">
+        📚 Semana 2 - Desarrollo de Aplicaciones
+      </h1>
+      <!-- Menú -->
+      <nav class="flex gap-4 text-sm md:text-base font-semibold">
+        <a href="index.html" class="hover:text-purple-400">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-400">Git</a>
+        <a href="manual_github.html" class="hover:text-purple-400">GitHub</a>
+        <a href="index.html#proyectos" class="hover:text-purple-400">Proyectos</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Contenido principal con sidebar -->
-  <main class="flex flex-1 mt-8 z-10 px-6 gap-6 items-start max-w-6xl mx-auto w-full">
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex flex-1 mt-28 z-10 px-6 gap-6 items-start max-w-7xl mx-auto w-full">
 
-    <!-- Barra lateral -->
-    <aside class="w-56 min-w-[14rem] bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-24 h-auto max-h-[72vh] overflow-y-auto">
-      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">Semanas</h2>
+    <!-- SIDEBAR DE SEMANAS -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/50 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-28 h-[75vh] overflow-y-auto text-sm font-semibold">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">📌 Semanas</h2>
       <div class="flex flex-col gap-2">
-        <a href="semana1.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 1</a>
-        <a href="semana2.html"  class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-lg transition">Semana 2</a>
-        <a href="semana3.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 3</a>
-        <a href="semana4.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 4</a>
-        <a href="semana5.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 5</a>
-        <a href="semana6.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 6</a>
-        <a href="semana7.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 7</a>
-        <a href="semana8.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 8</a>
-        <a href="semana9.html"  class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 9</a>
-        <a href="semana10.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 10</a>
-        <a href="semana11.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 11</a>
-        <a href="semana12.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 12</a>
-        <a href="semana13.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 13</a>
-        <a href="semana14.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 14</a>
-        <a href="semana15.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 15</a>
-        <a href="semana16.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 16</a>
+        <a href="semana1.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 1</a>
+        <a href="semana2.html"  class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-md">Semana 2</a>
+        <a href="semana3.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 3</a>
+        <a href="semana4.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 4... en curso</a>
+        <a href="semana5.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 5... en curso</a>
+        <a href="semana6.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 6... en curso</a>
+        <a href="semana7.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 7... en curso</a>
+        <a href="semana8.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 8... en curso</a>
+        <a href="semana9.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 9... en curso</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 10... en curso</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 11... en curso</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 12... en curso</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 13... en curso</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 14... en curso</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 15... en curso</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 16... en curso</a>
       </div>
     </aside>
 
-    <!-- Área de contenido -->
-    <section class="flex-1 space-y-10">
+    <!-- CONTENIDO DE LA SEMANA -->
+    <section class="flex-1 space-y-12">
 
       <!-- Introducción -->
-      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700">
-        <h2 class="text-2xl md:text-3xl font-bold text-purple-300 mb-4 text-center">📖 Introducción a la Semana 2</h2>
-        <p class="text-lg leading-relaxed text-justify">
-          En la segunda semana se resolvieron dos problemas orientados al manejo de 
-          <b>estructuras condicionales</b> y <b>validación de datos</b> en aplicaciones gráficas desarrolladas con 
-          <b>Java en Apache NetBeans</b>. 
-          Estos ejercicios refuerzan el diseño modular del proyecto, dividiendo el código en paquetes 
-          (<i>Main</i> e <i>IUG</i>) y concentrando la lógica en eventos de botones. 
-          Asimismo, se puso énfasis en la correcta interacción con el usuario, aplicando validaciones 
-          estrictas para evitar errores de ingreso de datos y mostrando cálculos detallados en la interfaz.
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-3xl font-bold text-purple-300 mb-4 text-center">📖 Introducción a la Semana 2</h2>
+        <p class="typing text-lg leading-relaxed text-center text-purple-200 font-bold">
+          💡 Domina condicionales en Java y crea apps más inteligentes.
+        </p>
+        <p class="text-lg leading-relaxed text-justify mt-6">
+          En esta segunda semana se trabajaron problemas aplicando <b>estructuras condicionales</b> 
+          y <b>validación de datos</b> en <b>Java con Apache NetBeans</b>.  
+          Los ejercicios refuerzan el diseño modular, dividiendo el proyecto en paquetes 
+          (<i>Main</i> e <i>IUG</i>), y asegurando que la interacción con el usuario sea 
+          clara y segura mediante validaciones.
         </p>
       </div>
 
       <!-- Problema 1 -->
-      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700">
-        <h2 class="text-xl font-bold text-purple-300 mb-4">🧩 Actividad 01: Tienda de Docenas</h2>
-        <p class="text-justify mb-4">
-          Se pide calcular el importe de una compra en función de las docenas adquiridas. 
-          El descuento depende de la cantidad: 
-          <b>20% si son 10 o más docenas</b>, de lo contrario <b>10%</b>. 
-          Además, si el importe a pagar es igual o superior a S/.200, 
-          la tienda ofrece <b>2 lapiceros por cada docena adquirida</b>. 
-          El programa debe mostrar el importe total, el descuento aplicado, el importe final 
-          y el número de obsequios, validando siempre que la entrada sea un número entero válido.
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-2xl font-bold text-purple-300 mb-4">🧩 Actividad 01: Tienda de Docenas</h2>
+        <p class="text-lg text-justify mb-4">
+          Se calcula el importe de la compra aplicando descuentos según las docenas adquiridas:  
+          <b>20% si son 10 o más</b>, o <b>10%</b> si son menos.  
+          Además, si el importe ≥ S/.200, se otorgan <b>2 lapiceros por cada docena</b>.  
+          El sistema valida entradas correctas y muestra importe total, descuento, pago final y obsequios.
         </p>
-        <div class="w-full rounded-lg overflow-hidden border border-purple-700 shadow-lg">
-          <iframe 
-            src="https://www.canva.com/design/DAGy_LQNuHs/Jd4kWQQrmTBbWZ7r_AbDDw/view?embed" 
-            class="w-full h-[60vh] lg:h-[78vh]" frameborder="0" allowfullscreen loading="lazy"
-            title="Diagrama de Clases - Problema 1">
-          </iframe>
-        </div>
+        <iframe src="https://www.canva.com/design/DAGy_LQNuHs/Jd4kWQQrmTBbWZ7r_AbDDw/view?embed"
+          class="w-full h-[60vh] lg:h-[78vh] rounded-xl border border-purple-600 shadow-lg"
+          frameborder="0" allowfullscreen loading="lazy"></iframe>
       </div>
 
       <!-- Problema 2 -->
-      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700">
-        <h2 class="text-xl font-bold text-purple-300 mb-4">🧩 Actividad 02: Sueldo de Empleado</h2>
-        <p class="text-justify mb-4">
-          El segundo problema consiste en calcular el sueldo de un trabajador considerando distintos factores. 
-          El <b>sueldo básico</b> depende de las horas trabajadas y de la categoría (A → S/.45.0, B → S/.37.5). 
-          Luego se añade una <b>bonificación por hijos</b>: hasta 3 hijos reciben S/.40.5 cada uno, y a partir del cuarto hijo, S/.35.0 cada uno. 
-          Finalmente, se aplica un <b>descuento por ley</b> que depende del sueldo bruto: 
-          13.5% si es ≥ 3500 o 10% si es menor. 
-          El sistema debe mostrar claramente el sueldo básico, el sueldo bruto, el descuento aplicado y el sueldo neto, 
-          garantizando la validación de todos los datos ingresados.
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-2xl font-bold text-purple-300 mb-4">🧩 Actividad 02: Sueldo de Empleado</h2>
+        <p class="text-lg text-justify mb-4">
+          Se calcula el sueldo de un empleado considerando:  
+          <b>Sueldo básico</b> (horas × tarifa según categoría),  
+          <b>bonificación por hijos</b> (S/.40.5 hasta 3 hijos, luego S/.35),  
+          y <b>descuento por ley</b> (13.5% si ≥ 3500, caso contrario 10%).  
+          El programa presenta sueldo básico, bruto, descuento y sueldo neto.
         </p>
-        <div class="w-full rounded-lg overflow-hidden border border-purple-700 shadow-lg">
-          <iframe 
-            src="https://www.canva.com/design/DAGy_TLTJps/py5kjKsxFARZ_TBGtihwvQ/view?embed" 
-            class="w-full h-[60vh] lg:h-[78vh]" frameborder="0" allowfullscreen loading="lazy"
-            title="Diagrama de Clases - Problema 2">
-          </iframe>
-        </div>
+        <iframe src="https://www.canva.com/design/DAGy_TLTJps/py5kjKsxFARZ_TBGtihwvQ/view?embed"
+          class="w-full h-[60vh] lg:h-[78vh] rounded-xl border border-purple-600 shadow-lg"
+          frameborder="0" allowfullscreen loading="lazy"></iframe>
       </div>
 
-      <!-- Botones navegación -->
-      <div class="flex justify-between">
-        <a href="semana1.html" 
-           class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105 hover:shadow-[0_0_15px_#a855f7]">
+      <!-- Navegación -->
+      <div class="flex justify-between fade-in">
+        <a href="semana1.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
           ⬅️ Semana 1
         </a>
-        <a href="index.html" 
-           class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105 hover:shadow-[0_0_15px_#a855f7]">
-          🏠 Volver a Inicio
+        <a href="index.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          🏠 Inicio
         </a>
-        <a href="semana3.html" 
-           class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105 hover:shadow-[0_0_15px_#a855f7]">
+        <a href="https://github.com/Wikkl20/DDA_Semana2" target="_blank"
+          class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          🌐 Ver en GitHub
+        </a>
+        <a href="semana3.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
           ➡️ Semana 3
         </a>
       </div>
+
     </section>
   </main>
 
@@ -130,6 +157,17 @@
     <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
     <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
   </footer>
+
+  <!-- Script fade-in -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fader => observer.observe(fader));
+  </script>
 
 </body>
 </html>
