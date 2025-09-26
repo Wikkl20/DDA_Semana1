@@ -12,7 +12,7 @@
       overflow-x: hidden;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
-      background: #000; /* Fondo negro puro */
+      background: rgb(0, 0, 0); /* Fondo negro puro */
     }
 
     /* Canvas partículas */
@@ -27,7 +27,7 @@
     /* Efecto máquina de escribir */
     .typewriter {
       display: inline-block;
-      border-right: 2px solid #a855f7;
+      border-right: 2px solid #753aac;
       white-space: nowrap;
       overflow: hidden;
       animation: blink 0.7s infinite;
@@ -53,53 +53,67 @@
   <!-- Fondo partículas -->
   <canvas id="particles"></canvas>
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md z-50 shadow-lg border-b border-purple-600">
-    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-      <div class="flex items-center gap-3">
-        <span class="text-3xl">🚀</span>
-        <h1 class="text-2xl md:text-3xl font-bold text-purple-400 drop-shadow-[0_0_25px_#a855f7]">
-          Supere tus Límites
-        </h1>
+ <!-- Navbar -->
+<header class="fixed top-0 left-0 w-full bg-purple-900/70 backdrop-blur-md z-50 shadow-lg border-b border-purple-700">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    <!-- Logo + título -->
+    <div class="flex items-center gap-3">
+      <img src="logo_uni.png" alt="Logo UPLA" class="w-12 h-12 object-contain">
+      <div class="flex flex-col leading-tight">
+        <span class="font-bold text-purple-300 text-sm md:text-base">UPLA</span>
+        <span class="text-xs text-gray-300 hidden md:inline">Ingeniería de Sistemas y Computación</span>
       </div>
-      <nav class="flex gap-6 text-lg">
-        <a href="index.html" class="hover:text-purple-400 font-semibold">Inicio</a>
-        <a href="#que-es" class="hover:text-purple-400 font-semibold">¿Qué es Git?</a>
-        <a href="#instalacion" class="hover:text-purple-400 font-semibold">Instalación</a>
-        <a href="#uso-basico" class="hover:text-purple-400 font-semibold">Uso Básico</a>
-        <a href="#recursos" class="hover:text-purple-400 font-semibold">Recursos</a>
-      </nav>
     </div>
-  </header>
+
+    <!-- Mensaje central -->
+    <div class="hidden md:flex items-center justify-center">
+      <div class="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-700/20 via-purple-700/15 to-pink-700/10 backdrop-blur-sm border border-purple-600/30">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-300 font-semibold">
+          Manual de Git — Aprende y Aplica
+        </span>
+      </div>
+    </div>
+
+    <!-- Menú -->
+    <nav class="flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400 font-semibold transition">Inicio</a>
+      <a href="#que-es" class="hover:text-purple-400 font-semibold transition">¿Qué es Git?</a>
+      <a href="#instalacion" class="hover:text-purple-400 font-semibold transition">Instalación</a>
+      <a href="#uso-basico" class="hover:text-purple-400 font-semibold transition">Uso Básico</a>
+      <a href="#recursos" class="hover:text-purple-400 font-semibold transition">Recursos</a>
+    </nav>
+  </div>
+</header>
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28">
-    <h2 class="text-4xl md:text-6xl font-bold text-purple-400 drop-shadow-[0_0_35px_#a855f7] mb-4 fade-in">
-      📘 Manual de Git
-    </h2>
-    <p class="text-lg md:text-xl max-w-2xl text-gray-200 fade-in mb-6">
-      Aprende a versionar tu código y colabora como un profesional.  
-      <span class="typewriter text-purple-400 font-bold">¡La programación es para todos!</span>
-    </p>
-    <lottie-player 
-  src="https://assets9.lottiefiles.com/packages/lf20_4kx2q32n.json" 
-  background="transparent" 
-  speed="1" 
-  style="width:300px;height:300px;" 
-  loop 
-  autoplay>
-</lottie-player>
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-purple-400 drop-shadow-[0_0_35px_#a855f7] mb-6 fade-in">
+  Manual de Git
+</h1>
+  <p class="text-lg md:text-xl max-w-3xl text-gray-200 fade-in mb-8 leading-relaxed">
+    Aprende a versionar tu código y colabora como un profesional.  
+    <span class="typewriter text-purple-400 font-bold">¡Tu viaje en programación comienza aquí!</span>
+  </p>
 
-    <a href="#que-es" class="mt-8 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-full shadow-lg hover:scale-110 transition">
-      🚀 Empezar Ahora
-    </a>
-  </section>
+  <!-- Animación estilo portada -->
+  <lottie-player 
+    src="https://assets9.lottiefiles.com/packages/lf20_4kx2q32n.json" 
+    background="transparent" 
+    speed="1" 
+    style="width:280px;height:280px;" 
+    loop 
+    autoplay>
+  </lottie-player>
 
-
+  <a href="#contenido" 
+     class="mt-10 px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-full shadow-lg hover:scale-110 transition">
+    🚀 Empezar Ahora
+  </a>
+</section>
 
   <!-- ¿Qué es Git? -->
   <section id="que-es" class="max-w-6xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 mb-6"> ¿Qué es Git?</h2>
+    <h2 class="text-3xl font-bold text-purple-300 mb-6">¿Qué es Git?</h2>
     <div class="bg-black/50 rounded-2xl p-8 shadow-lg border border-purple-600">
       <p class="text-lg leading-relaxed text-gray-300">
         Git es un <span class="font-bold text-purple-400">sistema de control de versiones</span> creado por 
@@ -113,43 +127,45 @@
   </section>
 
   <!-- Instalación -->
-  <section id="instalacion" class="max-w-6xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 mb-10">⚙️ Instalación de Git</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-purple-900/50 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-purple-300 mb-3">🖥️ Windows</h3>
-        <a href="https://git-scm.com/download/win" target="_blank"
-           class="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg font-bold hover:scale-105 inline-block">Descargar</a>
-      </div>
-      <div class="bg-purple-900/50 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-purple-300 mb-3">🐧 Linux</h3>
-        <pre class="bg-black/60 p-3 rounded text-gray-200">sudo apt install git</pre>
-      </div>
-      <div class="bg-purple-900/50 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-purple-300 mb-3">🍏 macOS</h3>
-        <pre class="bg-black/60 p-3 rounded text-gray-200">brew install git</pre>
-      </div>
+ <section id="instalacion" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+  <h2 class="text-3xl font-bold text-purple-300 mb-10 text-center drop-shadow-[0_0_15px_#9333ea]">
+  Instalación de Git
+</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-purple-900/40 p-8 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+     <h3 class="text-xl font-bold text-purple-300 mb-3">Windows</h3>
+      <a href="https://git-scm.com/download/win" target="_blank"
+         class="btn-glow inline-block mt-2 px-5 py-2">⬇️ Descargar</a>
     </div>
-  </section>
+    <div class="bg-purple-900/40 p-8 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <h3 class="text-xl font-bold text-purple-300 mb-3"> Linux</h3>
+      <pre class="bg-black/60 p-3 rounded text-gray-200 text-left">sudo apt install git</pre>
+    </div>
+    <div class="bg-purple-900/40 p-8 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <h3 class="text-xl font-bold text-purple-300 mb-3">macOS</h3>
+      <pre class="bg-black/60 p-3 rounded text-gray-200 text-left">brew install git</pre>
+    </div>
+  </div>
+</section>
 
   <!-- Uso básico -->
   <section id="uso-basico" class="max-w-6xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 mb-10">🚀 Comandos Básicos</h2>
+    <h2 class="text-3xl font-bold text-purple-300 mb-10"> Comandos Básicos</h2>
     <div class="grid md:grid-cols-2 gap-6">
       <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
-        <h3 class="text-lg font-bold text-purple-300">📂 Inicializar repositorio</h3>
+        <h3 class="text-lg font-bold text-purple-300"> Inicializar repositorio</h3>
         <pre class="bg-purple-900/40 p-3 rounded">git init</pre>
       </div>
       <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
-        <h3 class="text-lg font-bold text-purple-300">➕ Agregar archivos</h3>
+        <h3 class="text-lg font-bold text-purple-300"> Agregar archivos</h3>
         <pre class="bg-purple-900/40 p-3 rounded">git add .</pre>
       </div>
       <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
-        <h3 class="text-lg font-bold text-purple-300">💾 Guardar cambios</h3>
+        <h3 class="text-lg font-bold text-purple-300"> Guardar cambios</h3>
         <pre class="bg-purple-900/40 p-3 rounded">git commit -m "mensaje"</pre>
       </div>
       <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
-        <h3 class="text-lg font-bold text-purple-300">🌐 Subir a GitHub</h3>
+        <h3 class="text-lg font-bold text-purple-300"> Subir a GitHub</h3>
         <pre class="bg-purple-900/40 p-3 rounded">git push origin main</pre>
       </div>
     </div>
@@ -157,12 +173,12 @@
 
   <!-- Recursos -->
   <section id="recursos" class="max-w-6xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 mb-6">📚 Recursos Recomendados</h2>
+    <h2 class="text-3xl font-bold text-purple-300 mb-6"> Recursos Recomendados</h2>
     <ul class="space-y-4 text-lg">
-      <li>🌐 <a href="https://git-scm.com/" target="_blank" class="text-purple-400 underline">Página oficial de Git</a></li>
-      <li>📖 <a href="https://git-scm.com/doc" target="_blank" class="text-purple-400 underline">Documentación oficial</a></li>
-      <li>🎥 <a href="https://learngitbranching.js.org/" target="_blank" class="text-purple-400 underline">Learn Git Branching (interactivo)</a></li>
-      <li>📘 <a href="https://www.atlassian.com/es/git/tutorials" target="_blank" class="text-purple-400 underline">Tutorial en español (Atlassian)</a></li>
+      <li> <a href="https://git-scm.com/" target="_blank" class="text-purple-400 underline">Página oficial de Git</a></li>
+      <li> <a href="https://git-scm.com/doc" target="_blank" class="text-purple-400 underline">Documentación oficial</a></li>
+      <li> <a href="https://learngitbranching.js.org/" target="_blank" class="text-purple-400 underline">Learn Git Branching (interactivo)</a></li>
+      <li> <a href="https://www.atlassian.com/es/git/tutorials" target="_blank" class="text-purple-400 underline">Tutorial en español (Atlassian)</a></li>
     </ul>
   </section>
 
@@ -207,10 +223,10 @@
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
+        this.size = (Math.random() * 2 + 1) * 1.6; // 60% más grandes
         this.color = color;
-        this.speedX = (Math.random() - 0.5) * 1.2;
-        this.speedY = (Math.random() - 0.5) * 1.2;
+        this.speedX = (Math.random() - 1.5) * 1.2;
+        this.speedY = (Math.random() - 1.5) * 1.2;
       }
       update() {
         this.x += this.speedX;

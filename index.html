@@ -12,75 +12,52 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
   <style>
-    /* Fondo animado */
-    #fondo {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
-
-    /* Animación suave al hacer scroll */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.9s ease-in-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Efecto máquina de escribir */
+    #fondo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.9s ease-in-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
     .typewriter {
-      font-weight: bold;
-      font-size: 1.6rem;
-      color: #a855f7;
-      border-right: 3px solid #a855f7;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
-      width: 0;
+      font-weight: bold; font-size: 1.6rem; color: #a855f7;
+      border-right: 3px solid #a855f7; white-space: nowrap; overflow: hidden;
+      display: inline-block; width: 0;
       animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
     }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    /* Botones brillantes */
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
     .btn-glow {
       background: linear-gradient(90deg, #9333ea, #a855f7, #c084fc);
-      color: white;
-      font-weight: bold;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.75rem;
-      box-shadow: 0 0 20px rgba(168,85,247,0.8);
+      color: white; font-weight: bold; padding: 0.8rem 1.5rem;
+      border-radius: 0.75rem; box-shadow: 0 0 20px rgba(168,85,247,0.8);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .btn-glow:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px rgba(192,132,252,1);
+      transform: scale(1.1); box-shadow: 0 0 30px rgba(192,132,252,1);
       background: linear-gradient(90deg, #c084fc, #a855f7, #9333ea);
     }
   </style>
 </head>
 <body class="text-white font-sans">
-
-  <!-- Fondo animado -->
   <div id="fondo"></div>
 
-  <!-- Navbar superior sticky -->
+  <!-- Header -->
   <header class="fixed top-0 left-0 w-full bg-purple-900/70 backdrop-blur-md z-50 shadow-lg border-b border-purple-700">
-    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl md:text-3xl font-extrabold text-purple-300 drop-shadow-[0_0_15px_#9333ea] tracking-wide">
-        🚀 Bienvenido, listo para Aprender
-      </h1>
-      <nav class="flex gap-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-3">
+        <img src="logo_uni.png" alt="Logo UPLA" class="w-12 h-12 object-contain">
+        <div class="flex flex-col leading-tight">
+          <span class="font-bold text-purple-300 text-sm md:text-base">UPLA</span>
+          <span class="text-xs text-gray-300 hidden md:inline">Ingeniería de Sistemas y Computación</span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center justify-center">
+        <div class="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-700/20 via-purple-700/15 to-pink-700/10 backdrop-blur-sm border border-purple-600/30">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-300 font-semibold">
+            Bienvenido — Listo para aprender
+          </span>
+        </div>
+      </div>
+
+      <nav class="flex gap-6 text-sm">
         <a href="#inicio" class="hover:text-purple-400 font-semibold transition">Inicio</a>
         <a href="#sobre" class="hover:text-purple-400 font-semibold transition">Sobre mí</a>
         <a href="#manuales" class="hover:text-purple-400 font-semibold transition">Manuales</a>
@@ -90,69 +67,69 @@
     </div>
   </header>
 
-  <!-- Hero / Inicio -->
-<section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 md:pt-32">
-    <h2 class="text-4xl md:text-6xl font-extrabold text-purple-400 drop-shadow-[0_0_20px_#a855f7] mb-6 fade-in">
-      Hola 👋 Soy Kimberly Casimiro
+  <!-- Hero -->
+  <section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 md:pt-32">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-purple-400 mb-6 fade-in">
+      Hola, Soy Kimberly Casimiro
     </h2>
-    <!-- Frases motivadoras dinámicas -->
     <div class="h-12 mb-6">
       <span id="frase" class="typewriter"></span>
     </div>
     <p class="text-lg md:text-xl max-w-3xl text-gray-200 fade-in">
       Este portafolio muestra mi aprendizaje en <span class="font-bold text-purple-300">Desarrollo de Aplicaciones</span>.  
-      Aquí descubrirás manuales de Git y GitHub, y mis proyectos que demuestran que <span class="italic">¡la programación es para todos!</span>  
+      Aquí descubrirás manuales de Git y GitHub, y mis proyectos que demuestran que <span class="italic">¡la programación es para todos!</span>.
     </p>
-    <!-- Animación Lottie -->
-    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jcikwtux.json" 
-      background="transparent" speed="1" style="width: 280px; height: 280px;" loop autoplay>
-    </lottie-player>
-    <a href="#proyectos" class="btn-glow mt-6">🚀 Empieza tu Viaje</a>
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width: 280px; height: 280px;" loop autoplay></lottie-player>
+    <a href="#proyectos" class="btn-glow mt-6"> Empieza tu Viaje</a>
   </section>
-  
 
   <!-- Sobre mí -->
   <section id="sobre" class="max-w-5xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 text-center mb-6 drop-shadow-[0_0_15px_#9333ea]">
-      👩‍💻 Sobre mí
-    </h2>
-    <p class="text-lg text-justify leading-relaxed">
-      Soy estudiante de <span class="font-bold text-purple-400">Ingeniería de Sistemas y Computación</span>, apasionada por la programación 
-      y la construcción de aplicaciones útiles.  
-      Mi meta es inspirar a otros a descubrir el poder de la tecnología, porque <span class="font-bold text-purple-300">todos podemos programar</span>.
-    </p>
-    <div class="flex justify-center gap-6 mt-6 flex-wrap">
-      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ Java</span>
-      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ Git</span>
-      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ GitHub</span>
-      <span class="px-4 py-2 bg-purple-700 rounded-lg shadow-lg">⚡ PowerApps</span>
+    <h2 class="text-3xl font-bold text-purple-300 text-center mb-6">Sobre mí</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="foto.jpeg" alt="Mi foto" class="w-40 h-40 rounded-full border-4 border-purple-400 shadow-lg hover:scale-105 transition"/>
+      <p class="text-lg text-justify leading-relaxed">
+        Soy estudiante de <span class="font-bold text-purple-400">Ingeniería de Sistemas y Computación</span>, apasionada por la programación y la construcción de aplicaciones útiles.  
+        Mi meta es inspirar a otros a descubrir el poder de la tecnología, porque <span class="font-bold text-purple-300">todos podemos programar</span>.
+      </p>
     </div>
   </section>
 
-  <!-- Manuales -->
-  <section id="manuales" class="max-w-6xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 text-center mb-10 drop-shadow-[0_0_15px_#9333ea]">
-      📘 Manuales de Git & GitHub
-    </h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-purple-900/40 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-purple-300 mb-3">📖 Git</h3>
-        <p class="text-gray-300 mb-4">Control de versiones, comandos principales y flujo de trabajo ágil con Git.</p>
-        <a href="manual_git.html" class="btn-glow">Ver más</a>
-      </div>
-      <div class="bg-purple-900/40 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold text-purple-300 mb-3">📖 GitHub</h3>
-        <p class="text-gray-300 mb-4">Repositorios remotos, ramas, colaboración en equipo y despliegue profesional.</p>
-        <a href="manual_github.html" class="btn-glow">Ver más</a>
-      </div>
+    <!-- Manuales -->
+<section id="manuales" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+  <h2 class="text-3xl font-bold text-purple-300 text-center mb-10 drop-shadow-[0_0_15px_#9333ea]">📘 Manuales</h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Manual Git -->
+    <div class="bg-purple-900/40 p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
+      <h3 class="text-xl font-bold text-purple-300">Manual de Git</h3>
+      <p class="text-sm text-gray-300 mt-2">
+        Instalación, configuración y comandos básicos.
+      </p>
+      <a href="manual_git.html" target="_blank" 
+         class="btn-glow mt-4 inline-block text-sm px-6 py-2">
+         📖 Ver Manual
+      </a>
     </div>
-  </section>
+
+    <!-- Manual GitHub -->
+    <div class="bg-purple-900/40 p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
+      <h3 class="text-xl font-bold text-purple-300">Manual de GitHub</h3>
+      <p class="text-sm text-gray-300 mt-2">
+        Repos remotos, pull requests y buenas prácticas.
+      </p>
+      <a href="manual_github." target="_blank" 
+         class="btn-glow mt-4 inline-block text-sm px-6 py-2">
+         📖 Ver Manual
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Proyectos -->
   <section id="proyectos" class="max-w-6xl mx-auto px-6 py-20 fade-in">
-    <h2 class="text-3xl font-bold text-purple-300 text-center mb-10 drop-shadow-[0_0_15px_#9333ea]">
-      💻 Proyectos Semanales
-    </h2>
+    <h2 class="text-3xl font-bold text-purple-300 text-center mb-10">💻 Proyectos Semanales</h2>
     <div class="grid md:grid-cols-4 gap-4">
       <a href="semana1.html" class="bg-purple-900/40 p-4 rounded-xl shadow-lg hover:scale-105 transition text-center">
         <h3 class="font-bold text-purple-300">Semana 1</h3>
@@ -162,7 +139,21 @@
         <h3 class="font-bold text-purple-300">Semana 2</h3>
         <p class="text-sm text-gray-400">Cálculo de sueldo</p>
       </a>
-      <!-- Repite hasta Semana 16 -->
+      <a href="semana3.html" class="bg-purple-900/40 p-4 rounded-xl shadow-lg hover:scale-105 transition text-center">
+        <h3 class="font-bold text-purple-300">Semana 3</h3>
+        <p class="text-sm text-gray-400">Programación Orientada a Objetos</p>
+      </a>
+      <a href="semana4.html" class="bg-purple-900/40 p-4 rounded-xl shadow-lg hover:scale-105 transition text-center">
+        <h3 class="font-bold text-purple-300">Semana 4</h3>
+        <p class="text-sm text-gray-400">Arquitectura MVC</p>
+      </a>
+      <!-- Semanas futuras -->
+      <template id="semana-template">
+        <div class="bg-purple-900/30 p-4 rounded-xl shadow-lg text-center opacity-90">
+          <h3 class="font-bold text-purple-300">Semana X</h3>
+          <p class="text-sm text-gray-300 italic">En curso…</p>
+        </div>
+      </template>
     </div>
   </section>
 
@@ -174,55 +165,40 @@
     <a href="https://github.com/Wikkl20" target="_blank" class="btn-glow mt-4 inline-block">🌐 Mi GitHub</a>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Fondo Vanta.js espacio estrellado
-    VANTA.NET({
-      el: "#fondo",
-      mouseControls: true,
-      touchControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x9333ea,
-      backgroundColor: 0x000000,
-      points: 15.00,
-      maxDistance: 20.00,
-      spacing: 18.00
-    });
+    // Fondo animado
+    VANTA.NET({ el: "#fondo", color: 0x9333ea, backgroundColor: 0x000000 });
 
-    // Animación al hacer scroll
+    // Animación de aparición
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     });
-    faders.forEach(fader => observer.observe(fader));
+    faders.forEach(f => observer.observe(f));
 
-    // Frases motivadoras dinámicas
-    const frases = [
-      "✨ Tú también puedes programar ✨",
-      "🚀 Listo para aprender, crear y transformar 🚀",
-      "💡 Convierte tus ideas en aplicaciones 💡",
-      "🌍 El futuro lo construimos con código 🌍"
-    ];
+    // Frases dinámicas
+    const frases = [" Tú también puedes programar ✨"," Listo para aprender, crear y transformar "," Convierte tus ideas en aplicaciones "," El futuro lo construimos con código "];
     let i = 0;
     const fraseEl = document.getElementById("frase");
-
     function cambiarFrase() {
       fraseEl.classList.remove("typewriter");
-      void fraseEl.offsetWidth; // reinicia animación
+      void fraseEl.offsetWidth;
       fraseEl.textContent = frases[i];
       fraseEl.classList.add("typewriter");
       i = (i + 1) % frases.length;
     }
     setInterval(cambiarFrase, 4000);
     cambiarFrase();
-  </script>
 
+    // Generar semanas 5–16
+    const grid = document.querySelector("#proyectos .grid");
+    const template = document.querySelector("#semana-template");
+    for (let s = 5; s <= 16; s++) {
+      const clone = template.content.cloneNode(true);
+      clone.querySelector("h3").textContent = "Semana " + s;
+      grid.appendChild(clone);
+    }
+  </script>
 </body>
 </html>
+
