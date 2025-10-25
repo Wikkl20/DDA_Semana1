@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semana 7 - FrmPrincipal Agua Clara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+
+  <!-- Encabezado -->
+  <header class="w-full bg-purple-800/90 shadow-lg z-20 sticky top-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-4">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-14 h-14 object-contain">
+        <h1 class="text-2xl md:text-3xl font-bold drop-shadow-[0_0_15px_#a855f7]">
+          Desarrollo de Aplicaciones - Semana 7
+        </h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-lg font-semibold">
+        <a href="index.html" class="hover:text-purple-300 transition">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-300 transition">Manual Git</a>
+        <a href="manual_github.html" class="hover:text-purple-300 transition">Manual GitHub</a>
+        <a href="semana1.html" class="hover:text-purple-300 transition">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="flex flex-1 mt-8 z-10 px-6 gap-6 items-start max-w-6xl mx-auto w-full">
+
+    <!-- Sidebar -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-24 h-auto max-h-[72vh] overflow-y-auto">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">Semanas</h2>
+      <div class="flex flex-col gap-2">
+        <a href="semana1.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 1</a>
+        <a href="semana2.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 2</a>
+        <a href="semana3.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 3</a>
+        <a href="semana4.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 4</a>
+        <a href="semana5.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 5</a>
+        <a href="semana6.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 6</a>
+        <a href="semana7.html" class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-lg transition">semana 7 </a>
+        <a href="semana8.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 8</a>
+        <a href="semana9.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 9... en curso</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 10... en curso</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 11... en curso</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 12... en curso</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 13... en curso</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 14... en curso</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 15... en curso</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 16... en curso</a>
+      </div>
+    </aside>
+
+    <!-- Contenido -->
+    <section class="flex-1 space-y-10">
+
+      <!-- Descripción -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-3xl font-bold text-purple-300 mb-4 text-center"> Ventana Principal del Proyecto Agua Clara </h2>
+        <p class="text-lg leading-relaxed text-justify">
+          En esta semana se implementa la simulación de la <b>ventana principal (FrmPrincipal)</b> del proyecto <b>Agua Clara</b>. 
+          Esta interfaz representa la estructura general del sistema una vez que el usuario inicia sesión. 
+          Cuenta con una barra superior con saludo, un menú lateral dinámico y un panel central que muestra las diferentes secciones 
+          del sistema según el tipo de usuario.
+        </p>
+      </div>
+
+      <!-- Simulación de FrmPrincipal -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-6 border border-purple-700">
+        <h2 class="text-2xl font-bold text-purple-300 mb-4"> Simulación: FrmPrincipal </h2>
+        
+        <!-- Contenedor principal -->
+        <div class="border border-purple-700 rounded-xl overflow-hidden bg-black/40">
+
+          <!-- Barra superior -->
+          <div class="flex justify-between items-center bg-purple-800 px-4 py-3 text-white">
+            <h3 class="text-lg font-semibold">Bienvenido a Agua Clara</h3>
+            <button onclick="cerrarSesion()" class="bg-red-600 px-3 py-1 rounded hover:bg-red-400 transition">Salir</button>
+          </div>
+
+          <!-- Contenido principal -->
+          <div class="flex">
+
+            <!-- Menú lateral -->
+            <div class="w-1/4 bg-purple-900/60 p-4 border-r border-purple-700 flex flex-col gap-3">
+              <h4 class="text-center font-bold text-purple-300 mb-2">Menú</h4>
+              <div id="menuUsuario" class="hidden flex flex-col gap-2">
+                <button class="px-3 py-2 bg-purple-700 rounded hover:bg-purple-500 transition" onclick="mostrarPanel('realizarPago')">Realizar Pago</button>
+                <button class="px-3 py-2 bg-purple-700 rounded hover:bg-purple-500 transition" onclick="mostrarPanel('verBoletas')">Ver Boletas</button>
+              </div>
+              <div id="menuAdmin" class="hidden flex flex-col gap-2">
+                <button class="px-3 py-2 bg-purple-700 rounded hover:bg-purple-500 transition" onclick="mostrarPanel('realizarPago')">Realizar Pago</button>
+                <button class="px-3 py-2 bg-purple-700 rounded hover:bg-purple-500 transition" onclick="mostrarPanel('verPagos')">Ver Pagos</button>
+                <button class="px-3 py-2 bg-purple-700 rounded hover:bg-purple-500 transition" onclick="mostrarPanel('consumoBoleta')">Consumo Boleta</button>
+                <button class="px-3 py-2 bg-purple-700 rounded hover:bg-purple-500 transition" onclick="mostrarPanel('registrarUsuarios')">Registrar Usuarios</button>
+              </div>
+            </div>
+
+            <!-- Panel dinámico -->
+            <div class="flex-1 p-6 text-center" id="panelPrincipal">
+              <h4 class="text-xl font-bold text-purple-300 mb-3">Panel Principal</h4>
+              <p>Seleccione una opción del menú para comenzar.</p>
+              
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Selector de tipo de usuario -->
+        <div class="text-center mt-6">
+          <label for="tipo" class="mr-2">Tipo de usuario:</label>
+          <select id="tipo" onchange="cambiarMenu()" class="text-black rounded p-2">
+            <option value="">Seleccione...</option>
+            <option value="usuario">Usuario</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-3xl font-bold text-purple-300 mb-4 text-center">Captura de FromPrincipal </h2>
+      </div>
+       <div class="text-center">
+          <img src="FromPrincipal.png" alt="Vista del Login Agua Clara" class="mx-auto rounded-2xl shadow-lg border border-purple-700 w-3/4">
+        </div>
+
+      <!-- Navegación -->
+      <div class="flex justify-between">
+        <a href="semana6.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition">⬅️ Semana 6</a>
+        <a href="semana8.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition">➡️ Semana 8</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
+    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
+    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  </footer>
+
+  <!-- Script funcional -->
+  <script>
+    function cambiarMenu() {
+      const tipo = document.getElementById("tipo").value;
+      const menuUsuario = document.getElementById("menuUsuario");
+      const menuAdmin = document.getElementById("menuAdmin");
+      const panel = document.getElementById("panelPrincipal");
+
+      menuUsuario.classList.add("hidden");
+      menuAdmin.classList.add("hidden");
+      panel.innerHTML = '<h4 class="text-xl font-bold text-purple-300 mb-3">Panel Principal</h4><p>Seleccione una opción del menú para comenzar.</p>';
+
+      if (tipo === "usuario") {
+        menuUsuario.classList.remove("hidden");
+      } else if (tipo === "admin") {
+        menuAdmin.classList.remove("hidden");
+      }
+    }
+
+    function mostrarPanel(opcion) {
+      const panel = document.getElementById("panelPrincipal");
+      let contenido = "";
+
+      switch(opcion) {
+        case 'realizarPago':
+          contenido = `
+            <h4 class="text-2xl font-bold text-purple-300 mb-3">Realizar Pago</h4>
+            <p>Formulario para registrar nuevos pagos de los usuarios.</p>
+          `;
+          break;
+        case 'verBoletas':
+          contenido = `
+            <h4 class="text-2xl font-bold text-purple-300 mb-3">Ver Boletas</h4>
+            <p>Listado de boletas registradas por el usuario.</p>
+          `;
+          break;
+        case 'verPagos':
+          contenido = `
+            <h4 class="text-2xl font-bold text-purple-300 mb-3">Ver Pagos</h4>
+            <p>Vista general de todos los pagos realizados en el sistema.</p>
+          `;
+          break;
+        case 'consumoBoleta':
+          contenido = `
+            <h4 class="text-2xl font-bold text-purple-300 mb-3">Consumo Boleta</h4>
+            <p>Consulta del consumo mensual y detalle de boletas emitidas.</p>
+          `;
+          break;
+        case 'registrarUsuarios':
+          contenido = `
+            <h4 class="text-2xl font-bold text-purple-300 mb-3">Registrar Usuarios</h4>
+            <p>Formulario para agregar o modificar usuarios del sistema.</p>
+          `;
+          break;
+        default:
+          contenido = "<p>Seleccione una opción del menú.</p>";
+      }
+
+      panel.innerHTML = contenido;
+    }
+
+    function cerrarSesion() {
+      alert("Sesión cerrada correctamente.");
+      window.location.reload();
+    }
+  </script>
+
+</body>
+</html>

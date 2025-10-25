@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semana 4 - Desarrollo de Aplicaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+
+  <!-- Encabezado -->
+  <header class="w-full bg-purple-800/90 shadow-lg z-20 sticky top-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-4">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-14 h-14 object-contain">
+        <h1 class="text-2xl md:text-3xl font-bold drop-shadow-[0_0_15px_#a855f7]">
+          Desarrollo de Aplicaciones - Semana 4
+        </h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-lg font-semibold">
+        <a href="index.html" class="hover:text-purple-300 transition">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-300 transition">Manual Git</a>
+        <a href="manual_github.html" class="hover:text-purple-300 transition">Manual GitHub</a>
+        <a href="semana1.html" class="hover:text-purple-300 transition">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="flex flex-1 max-w-7xl mx-auto px-4 py-10 gap-8 relative z-10">
+
+    <!-- Barra lateral -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-24 h-auto max-h-[72vh] overflow-y-auto">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">Semanas</h2>
+      <div class="flex flex-col gap-2">
+        <!-- Lista completa de semanas -->
+        <a href="semana1.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 1</a>
+        <a href="semana2.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 2</a>
+        <a href="semana3.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 3</a>
+        <a href="semana4.html" class="px-3 py-2 bg-purple-400 text-black rounded-lg font-bold shadow-lg transition">Semana 4</a>
+        <a href="semana5.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 5</a>
+        <a href="semana6.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 6</a>
+        <a href="semana7.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 7</a>
+        <a href="semana8.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 8</a>
+        <a href="semana9.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 9</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 10</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 11</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 12</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 13</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 14</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 15</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-400 hover:text-black transition">Semana 16</a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO CENTRAL -->
+    <section class="flex-1 space-y-10">
+
+      <!-- INTRODUCCIÓN -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-3xl font-bold text-purple-300 mb-4 text-center">Introducción a la Semana 4</h2>
+        <p class="text-lg text-justify leading-relaxed">
+          En esta semana trabajamos con dos aplicaciones creadas en <strong>Apache NetBeans</strong>.
+          En la primera, aplicamos conceptos de <strong>programación orientada a objetos</strong> para calcular
+          áreas y perímetros de figuras geométricas, representando visualmente cada figura.  
+          En la segunda, desarrollamos un <strong>login con roles (docente y estudiante)</strong> para aprender la lógica
+          de validación de usuarios y control de accesos, una base fundamental antes de conectar a bases de datos con JDBC.
+        </p>
+      </div>
+
+      <!-- EJERCICIO 1 -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700 space-y-6">
+        <h2 class="text-2xl font-bold text-purple-300 mb-2 text-center">Ejercicio 1: Cálculo de Áreas y Perímetros</h2>
+        <p class="text-justify leading-relaxed">
+          La aplicación solicita ingresar los valores para calcular el área o perímetro de un cuadrado, rectángulo o círculo.
+          Una vez calculado, se dibuja la figura en píxeles para visualizar el resultado de forma práctica.
+        </p>
+
+        <!-- Diagrama de clases -->
+        <div class="bg-black/40 rounded-xl p-4 mx-auto max-w-xl">
+          <h3 class="font-bold text-purple-300 mb-2 text-center">Diagrama de Clases</h3>
+          <pre class="text-sm text-purple-200 overflow-x-auto text-center"><code>
++---------------------------------------+
+|              Figura                   |
++---------------------------------------+
+| - nombre: String                      |
+| - color: String                       |
++---------------------------------------+
+| + calcularArea(): double              |
+| + calcularPerimetro(): double         |
++---------------------------------------+
+             /   |   \
+            /    |    \
+           /     |     \
++-----------+ +-----------+ +-----------+
+| Cuadrado  | | Rectangulo| | Circulo   |
++-----------+ +-----------+ +-----------+
+| - lado    | | - base    | | - radio   |
+|           | | - altura  | |           |
++-----------+ +-----------+ +-----------+
+          </code></pre>
+        </div>
+
+        <!-- Aplicación funcional centrada -->
+        <div class="bg-black/40 p-6 rounded-xl flex flex-col items-center justify-center">
+          <h3 class="font-bold text-purple-300 mb-4 text-center">Prueba interactiva</h3>
+          <div class="flex flex-col gap-3 w-64">
+            <select id="figura" class="text-black p-2 rounded">
+              <option value="cuadrado">Cuadrado</option>
+              <option value="rectangulo">Rectángulo</option>
+              <option value="circulo">Círculo</option>
+            </select>
+            <input id="valor1" type="number" placeholder="Valor 1" class="text-black p-2 rounded"/>
+            <input id="valor2" type="number" placeholder="Valor 2 (si aplica)" class="text-black p-2 rounded"/>
+            <div class="flex gap-3 justify-center">
+              <button onclick="calcular('area')" class="bg-purple-600 px-4 py-2 rounded hover:bg-purple-400">Área</button>
+              <button onclick="calcular('perimetro')" class="bg-purple-600 px-4 py-2 rounded hover:bg-purple-400">Perímetro</button>
+            </div>
+            <p id="resultado" class="mt-2 text-purple-200 font-semibold text-center"></p>
+          </div>
+          <canvas id="canvas" width="300" height="300" class="bg-white rounded mt-4"></canvas>
+        </div>
+      </div>
+
+      <!-- EJERCICIO 2 -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700 space-y-6">
+        <h2 class="text-2xl font-bold text-purple-300 mb-2 text-center">Ejercicio 2: Login con Roles</h2>
+        <p class="text-justify leading-relaxed">
+          En este ejercicio se simula un sistema de login donde el usuario puede ingresar como
+          <strong>docente</strong> o <strong>estudiante</strong>. Cada uno tiene funciones diferentes:
+          el docente puede calcular áreas y perímetros, mientras que el estudiante solo puede calcular perímetros.
+          Esta práctica servirá como base para futuras conexiones a bases de datos con JDBC.
+        </p>
+
+        <!-- Diagrama -->
+        <div class="bg-black/40 p-4 rounded-xl mx-auto max-w-xl">
+          <h3 class="font-bold text-purple-300 mb-2 text-center">Diagrama de Clases</h3>
+          <pre class="text-sm text-purple-200 overflow-x-auto text-center"><code>
++------------------------+
+|        Usuario         |
++------------------------+
+| - usuario: String      |
+| - contraseña: String   |
+| - rol: String          |
++------------------------+
+| +validarLogin(): bool  |
++------------------------+
+            / \
+           /   \
++------------------------+    +------------------------+
+|      Estudiante        |    |        Docente         |
++------------------------+    +------------------------+
+| +calcularPerimetro()   |    | +calcularArea()        |
+|                        |    | +calcularPerimetro()   |
++------------------------+    +------------------------+
+          </code></pre>
+        </div>
+
+        <!-- Login centrado -->
+        <div class="bg-black/40 p-6 rounded-xl flex flex-col items-center justify-center">
+          <h3 class="font-bold text-purple-300 mb-4 text-center">Simulación del Login</h3>
+          <div class="flex flex-col gap-3 w-64">
+            <input id="usuario" type="text" placeholder="Usuario" class="text-black p-2 rounded"/>
+            <input id="clave" type="password" placeholder="Contraseña" class="text-black p-2 rounded"/>
+            <button onclick="login()" class="bg-purple-600 px-4 py-2 rounded hover:bg-purple-400">Ingresar</button>
+            <p id="mensaje" class="mt-2 text-purple-200 font-semibold text-center"></p>
+            <p id="rol" class="text-purple-300 text-center"></p>
+            <button onclick="logout()" class="bg-gray-600 px-4 py-2 rounded hover:bg-gray-400 hidden" id="logoutBtn">Cerrar sesión</button>
+          </div>
+          <div id="panel" class="hidden text-center mt-4">
+            <p class="text-purple-200">Bienvenido al panel de usuario.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <div class="flex justify-between">
+        <a href="semana3.html" class="px-6 py-3 bg-purple-700 rounded-xl hover:bg-purple-400 hover:text-black transition">⬅️ Semana 3</a>
+        <a href="index.html" class="px-6 py-3 bg-purple-700 rounded-xl hover:bg-purple-400 hover:text-black transition">Volver a Inicio</a>
+        <a href="https://github.com/Wikkl20/DDA_Semana4" target="_blank" class="px-6 py-3 bg-purple-700 rounded-xl hover:bg-purple-400 hover:text-black transition">Ver en GitHub</a>
+        <a href="semana5.html" class="px-6 py-3 bg-purple-700 rounded-xl hover:bg-purple-400 hover:text-black transition">➡️ Semana 5</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
+    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
+    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function calcular(tipo) {
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const f = figura.value;
+      const v1 = parseFloat(valor1.value);
+      const v2 = parseFloat(valor2.value);
+      let resultado = "";
+      ctx.fillStyle = "#6366f1";
+
+      if (f === "cuadrado") {
+        resultado = tipo === "area" ? v1 * v1 : 4 * v1;
+        ctx.fillRect(100, 100, v1, v1);
+      } else if (f === "rectangulo") {
+        resultado = tipo === "area" ? v1 * v2 : 2 * (v1 + v2);
+        ctx.fillRect(80, 80, v1, v2);
+      } else if (f === "circulo") {
+        resultado = tipo === "area"
+          ? Math.PI * Math.pow(v1, 2)
+          : 2 * Math.PI * v1;
+        ctx.beginPath();
+        ctx.arc(150, 150, v1, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+      document.getElementById("resultado").innerText = 
+        `El ${tipo} del ${f} es: ${resultado.toFixed(2)}`;
+    }
+
+    function login() {
+      const usuario = document.getElementById("usuario").value;
+      const clave = document.getElementById("clave").value;
+      const mensaje = document.getElementById("mensaje");
+      const rol = document.getElementById("rol");
+      const panel = document.getElementById("panel");
+      const logoutBtn = document.getElementById("logoutBtn");
+
+      if (usuario === "docente" && clave === "1234") {
+        mensaje.innerText = "Bienvenido, Docente 👨‍🏫";
+        rol.innerText = "Rol: Docente - Puede calcular áreas y perímetros.";
+        panel.classList.remove("hidden");
+        logoutBtn.classList.remove("hidden");
+      } else if (usuario === "estudiante" && clave === "5678") {
+        mensaje.innerText = "Bienvenido, Estudiante 👨‍🎓";
+        rol.innerText = "Rol: Estudiante - Solo puede calcular perímetros.";
+        panel.classList.remove("hidden");
+        logoutBtn.classList.remove("hidden");
+      } else {
+        mensaje.innerText = "Usuario o contraseña incorrectos.";
+      }
+    }
+
+    function logout() {
+      document.getElementById("panel").classList.add("hidden");
+      document.getElementById("logoutBtn").classList.add("hidden");
+      document.getElementById("mensaje").innerText = "";
+      document.getElementById("rol").innerText = "";
+      document.getElementById("usuario").value = "";
+      document.getElementById("clave").value = "";
+    }
+  </script>
+</body>
+</html>
